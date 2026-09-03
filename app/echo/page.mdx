@@ -1,0 +1,145 @@
+export const metadata = {
+  title: 'Echo — AI Communication Copilot',
+  description: 'Smart browser extension and AI assistant that sits inside messaging apps and helps you reply faster while sounding exactly like you.',
+  alternates: { canonical: '/echo' }
+};
+
+# Echo — AI Communication Copilot
+
+<div className="text-zinc-400 text-sm mb-8 font-serif">
+  Persona Case Study • Chrome Extension (Manifest V3) • Privacy-First NLP & Local Memory
+</div>
+
+<div className="space-y-8 text-[15.5px] text-zinc-300 leading-relaxed font-serif">
+
+<p>
+  <strong className="text-zinc-100 font-medium">Echo</strong> is a smart browser extension (an AI communication copilot) that integrates directly into your web messaging apps to help you reply to chats faster <em>while sounding authentically like you</em>, eliminating the robotic, stiff tone typical of standard AI chatbots.
+</p>
+
+<h2 className="font-cormorant text-2xl text-zinc-100 font-semibold pt-4 mb-2">1. The Problem: Why Standard AI Fails in Messaging</h2>
+
+<p>
+  Most people communicating across professional and informal channels face two major frictions:
+</p>
+
+<ul className="space-y-2 text-zinc-300 pl-4 list-disc">
+  <li>
+    <strong className="text-zinc-200">The "Robotic AI" Syndrome:</strong> Standard cloud models generate verbose, overly formal paragraphs ("I hope this message finds you in good health") that sound completely unnatural in instant messaging.
+  </li>
+  <li>
+    <strong className="text-zinc-200">Context Switching Overhead:</strong> Copy-pasting conversation snippets back and forth into ChatGPT browser tabs breaks conversation flow and takes more time than typing manually.
+  </li>
+  <li>
+    <strong className="text-zinc-200">Privacy & Data Leakage:</strong> Sending personal and professional chat histories to third-party cloud servers introduces significant privacy risks.
+  </li>
+</ul>
+
+<h2 className="font-cormorant text-2xl text-zinc-100 font-semibold pt-4 mb-2">2. Supported Messaging Platforms</h2>
+
+<p>
+  Echo runs natively inside Google Chrome and Chromium browsers, injecting an isolated glassmorphic floating action dock directly above active chat boxes across:
+</p>
+
+<ul className="space-y-2 text-zinc-300 pl-4 list-disc">
+  <li><strong className="text-zinc-200">WhatsApp Web</strong> (web.whatsapp.com)</li>
+  <li><strong className="text-zinc-200">Instagram Direct Messages</strong> (instagram.com/direct)</li>
+  <li><strong className="text-zinc-200">Telegram Web</strong> (web.telegram.org)</li>
+  <li><strong className="text-zinc-200">Discord Web</strong> (discord.com/app)</li>
+  <li><strong className="text-zinc-200">X (Twitter) DMs</strong> (x.com/messages)</li>
+</ul>
+
+<LifePhotoGrid photos={[
+  { src: '/projects/echo-preview-1.png', alt: 'Echo In-Chat Smart Reply Dock', title: 'Smart Reply Interface', caption: 'Echo In-Chat Floating Smart Reply Bar (WhatsApp & Instagram)' },
+  { src: '/projects/echo-preview-2.png', alt: 'Echo Persona Settings & Style Controls', title: 'Persona Settings', caption: 'Echo Persona Configuration & Local Memory Settings' }
+]} />
+
+<h2 className="font-cormorant text-2xl text-zinc-100 font-semibold pt-4 mb-2">3. Key Features & Capabilities</h2>
+
+<ul className="space-y-4 text-zinc-300 pl-2">
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">▪</span>
+    <div>
+      <strong className="text-zinc-100">1-Click Smart Replies:</strong> When incoming messages arrive, Echo parses the last 5–10 chat bubbles and generates 3 contextual reply options in &lt;180ms. Clicking an option instantly populates the message input box.
+    </div>
+  </li>
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">▪</span>
+    <div>
+      <strong className="text-zinc-100">Adaptive Persona Learning:</strong> Echo analyzes your typical punctuation patterns, favorite colloquial phrases, customary greetings, and preferred sentence lengths so generated drafts feel genuinely personal.
+    </div>
+  </li>
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">▪</span>
+    <div>
+      <strong className="text-zinc-100">Ghost Mode / Multi-Tone Switcher:</strong> Switch message registers on the fly with a single click:
+      <ul className="space-y-1.5 pt-2 pl-4 text-sm text-zinc-400 list-disc">
+        <li><strong className="text-zinc-300">Executive / Formal:</strong> Tailored for professors, hiring managers, and corporate stakeholders.</li>
+        <li><strong className="text-zinc-300">Casual / Friendly:</strong> Natural, relaxed phrasing for peer groups and close friends.</li>
+        <li><strong className="text-zinc-300">Short & Punchy:</strong> Quick confirmations when time is limited.</li>
+        <li><strong className="text-zinc-300">Empathetic / Diplomatic:</strong> Thoughtful conflict resolution and collaborative responses.</li>
+      </ul>
+    </div>
+  </li>
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">▪</span>
+    <div>
+      <strong className="text-zinc-100">Draft Polisher & Mistake Corrector:</strong> Quick-type fragmented thoughts or rushed notes and let Echo clean up spelling, punctuation, and grammar without altering your authentic vocabulary.
+    </div>
+  </li>
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">▪</span>
+    <div>
+      <strong className="text-zinc-100">Resilient Hybrid Architecture:</strong> Combines ultra-fast cloud inference (NVIDIA NIM Llama 3.3) with an offline "Own Mind" NLP & Memory Corpus that maintains intelligent auto-replies even when internet connectivity drops.
+    </div>
+  </li>
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">▪</span>
+    <div>
+      <strong className="text-zinc-100">Zero-Telemetry Privacy:</strong> Personal message history and persona configuration vectors are stored strictly inside local browser storage (<code className="text-xs bg-zinc-800 px-1 py-0.5 rounded">chrome.storage.local</code>), guaranteeing complete data isolation.
+    </div>
+  </li>
+</ul>
+
+<h2 className="font-cormorant text-2xl text-zinc-100 font-semibold pt-4 mb-2">4. Technical Architecture</h2>
+
+<p>
+  Echo is architected into three distinct decoupled layers:
+</p>
+
+<ul className="space-y-3 text-zinc-300 pl-2">
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">1.</span>
+    <div>
+      <strong className="text-zinc-100">DOM Injection & UI Layer (React 18 & Manifest V3):</strong> Injects an isolated shadow root above chat input fields with zero page layout shift, mutation observers for real-time bubble detection, and keyboard shortcut listeners.
+    </div>
+  </li>
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">2.</span>
+    <div>
+      <strong className="text-zinc-100">Context Analyzer & Persona Brain (Python FastAPI / NVIDIA NIM):</strong> Extracts multi-turn conversation context, applies style vector weighting, and generates 3 diverse response trajectories.
+    </div>
+  </li>
+  <li className="flex gap-2">
+    <span className="text-zinc-500 shrink-0">3.</span>
+    <div>
+      <strong className="text-zinc-100">Local Memory Engine (IndexedDB & Chrome Storage):</strong> Tracks frequency metrics, style preferences, and offline fallback dictionaries without sending data to external databases.
+    </div>
+  </li>
+</ul>
+
+<h2 className="font-cormorant text-2xl text-zinc-100 font-semibold pt-4 mb-2">5. Summary in 30 Seconds</h2>
+
+<blockquote className="border-l-2 border-zinc-700 pl-4 italic text-zinc-200 my-4 text-base">
+  "Echo is a personal AI communication copilot for messaging apps like WhatsApp and Instagram. Instead of giving generic, robotic answers, it learns your authentic texting style and provides 3 instant reply suggestions directly above your chat box. It saves hours of typing, fixes typos on the fly, and lets you switch communication tones effortlessly while keeping all data 100% private."
+</blockquote>
+
+<div className="pt-6 border-t border-zinc-800 flex items-center justify-between">
+  <a href="/projects" className="text-sm text-zinc-400 hover:text-white underline underline-offset-4 decoration-zinc-600 transition-colors">
+    ← Back to Projects
+  </a>
+  <a href="https://github.com/EmptyEch0/Echo" target="_blank" rel="noopener noreferrer" className="text-sm text-zinc-300 hover:text-white underline underline-offset-4 decoration-zinc-600 transition-colors">
+    View on GitHub →
+  </a>
+</div>
+
+</div>

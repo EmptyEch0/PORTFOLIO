@@ -1,0 +1,135 @@
+export interface IntroQuote {
+  category: string;
+  type: 'JOKE' | 'FACT' | 'THOUGHT';
+  text: string;
+}
+
+export const PORTFOLIO_INTRO_QUOTES: IntroQuote[] = [
+  // 🐛 Bugs & Debugging
+  { category: "Bugs & Debugging", type: "JOKE", text: '"It works on my machine." — The beginning of every production incident.' },
+  { category: "Bugs & Debugging", type: "JOKE", text: "Debugging is being the detective in a crime scene where you are also the criminal." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "There are no bugs. Only features nobody requested." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "One small change. Famous last words." },
+  { category: "Bugs & Debugging", type: "JOKE", text: '"I\'ll fix it tomorrow" is how technical debt is born.' },
+  { category: "Bugs & Debugging", type: "JOKE", text: "The bug disappears the moment you show someone the screen." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "Sometimes the debugger is just you staring at the code until it apologizes." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "If restarting the server fixes it, don't ask why." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "The code worked perfectly five minutes ago." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "Every developer has a piece of code they are afraid to touch." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "You don't find bugs. Bugs find you." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "The closer you get to fixing a bug, the more bugs you discover." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "A temporary solution becomes permanent surprisingly fast." },
+  { category: "Bugs & Debugging", type: "JOKE", text: "Production is where your code meets reality." },
+  { category: "Bugs & Debugging", type: "JOKE", text: '"It should be easy" usually isn\'t.' },
+
+  // 🧠 Programming Humor
+  { category: "Programming Humor", type: "JOKE", text: "Programming is 10% writing code and 90% figuring out why it doesn't work." },
+  { category: "Programming Humor", type: "JOKE", text: "Naming things is harder than writing the code." },
+  { category: "Programming Humor", type: "JOKE", text: "There are only two hard problems in computer science: naming things, cache invalidation, and off-by-one errors." },
+  { category: "Programming Humor", type: "JOKE", text: "The semicolon was innocent." },
+  { category: "Programming Humor", type: "JOKE", text: "My code is self-documenting. Unfortunately, it tells a horror story." },
+  { category: "Programming Humor", type: "JOKE", text: "Good code is easy to understand. Great code makes you wonder why you didn't think of it." },
+  { category: "Programming Humor", type: "JOKE", text: "I don't always refactor. Sometimes I just rename the variable." },
+  { category: "Programming Humor", type: "JOKE", text: 'Git commit messages: "fixed stuff."' },
+  { category: "Programming Humor", type: "JOKE", text: 'TODO is just a developer\'s way of saying "future me can deal with this."' },
+  { category: "Programming Humor", type: "JOKE", text: 'The best code review comment is "LGTM" when you haven\'t read the code.' },
+  { category: "Programming Humor", type: "JOKE", text: "Copy, paste, pray." },
+  { category: "Programming Humor", type: "JOKE", text: "Documentation is often written by the person who already knows everything." },
+  { category: "Programming Humor", type: "JOKE", text: "Every large project started as a small project someone said would only take a weekend." },
+  { category: "Programming Humor", type: "JOKE", text: '"Let\'s rewrite it from scratch." — The beginning of another three-year project.' },
+  { category: "Programming Humor", type: "JOKE", text: "A developer's favorite data structure is someone else's API." },
+
+  // 🌐 Internet
+  { category: "Internet History", type: "FACT", text: "The first message sent over ARPANET was supposed to be LOGIN." },
+  { category: "Internet History", type: "FACT", text: "The system crashed after the first two letters: LO." },
+  { category: "Internet History", type: "FACT", text: "The first registered domain name was symbolics.com." },
+  { category: "Internet History", type: "FACT", text: "Email existed before the World Wide Web." },
+  { category: "Internet History", type: "FACT", text: "The first webcam was created to monitor a coffee pot." },
+  { category: "Internet", type: "JOKE", text: "The internet was invented so developers could search Stack Overflow." },
+  { category: "Internet", type: "JOKE", text: "The internet is just computers asking other computers for things." },
+  { category: "Internet", type: "THOUGHT", text: "Every website is basically a conversation between a browser and a server." },
+  { category: "Internet", type: "JOKE", text: "Wi-Fi works perfectly until you actually need it." },
+  { category: "Internet", type: "JOKE", text: '"No internet connection" is modern technology\'s way of saying "good luck."' },
+
+  // 🖱️ Weird Computer Facts
+  { category: "Hardware Facts", type: "FACT", text: "The first computer mouse was made from wood." },
+  { category: "Hardware Facts", type: "FACT", text: "The original mouse had two wheels that tracked movement." },
+  { category: "Hardware Facts", type: "FACT", text: "The QWERTY keyboard was designed for mechanical typewriters." },
+  { category: "Computer Trivia", type: "FACT", text: "Python was named after Monty Python, not the snake." },
+  { category: "Computer Trivia", type: "FACT", text: "JavaScript was created in about ten days." },
+  { category: "Computer Trivia", type: "FACT", text: "Bluetooth was named after Harald \"Bluetooth\" Gormsson, a Viking king." },
+  { category: "Computer Trivia", type: "FACT", text: "QR codes were originally developed for tracking automobile parts." },
+  { category: "Hardware Facts", type: "FACT", text: "The first hard drive weighed hundreds of kilograms and stored only a few megabytes." },
+  { category: "Computing History", type: "FACT", text: "The first computer programmers included women who worked on ENIAC." },
+  { category: "Computing History", type: "FACT", text: "The first computer bug famously documented in a machine was an actual moth." },
+
+  // 🐍 Programming Language Jokes
+  { category: "Languages", type: "JOKE", text: "Python: indentation is part of the law." },
+  { category: "Languages", type: "JOKE", text: "JavaScript: where [] + [] can become a philosophical discussion." },
+  { category: "Languages", type: "JOKE", text: "C: because sometimes you want to know exactly where the memory went." },
+  { category: "Languages", type: "JOKE", text: "C++: C, but now there are more ways to be confused." },
+  { category: "Languages", type: "JOKE", text: "Java: write once, debug everywhere." },
+  { category: "Languages", type: "JOKE", text: "TypeScript: JavaScript, but your editor asks more questions." },
+  { category: "Languages", type: "JOKE", text: "Rust: the compiler is your strictest code reviewer." },
+  { category: "Languages", type: "JOKE", text: "SQL: \"just one more query.\"" },
+  { category: "Languages", type: "JOKE", text: "HTML isn't technically a programming language, but developers will still argue about it." },
+  { category: "Languages", type: "JOKE", text: "CSS: everything is aligned until you open another browser." },
+
+  // 🤖 AI & Machine Learning
+  { category: "AI & ML", type: "JOKE", text: "AI can write the code. You still have to explain why it broke production." },
+  { category: "AI & ML", type: "JOKE", text: '"Just add AI" is not a system architecture.' },
+  { category: "AI & ML", type: "JOKE", text: "The model is confident. The answer is not." },
+  { category: "AI & ML", type: "JOKE", text: "AI hallucinations: when the machine decides reality is optional." },
+  { category: "AI & ML", type: "JOKE", text: "Prompt engineering sometimes feels like negotiating with a very smart intern." },
+  { category: "AI & ML", type: "JOKE", text: "The AI generated 500 lines of code. Three of them were useful." },
+  { category: "AI & ML", type: "THOUGHT", text: "A model is only as useful as the system built around it." },
+  { category: "AI & ML", type: "FACT", text: "A token isn't necessarily a word." },
+  { category: "AI & ML", type: "FACT", text: "Embeddings represent information as vectors." },
+  { category: "AI & ML", type: "FACT", text: "Transformers use attention mechanisms to model relationships between tokens." },
+  { category: "AI & ML", type: "FACT", text: "GPUs are extremely good at parallel numerical computation." },
+  { category: "AI & ML", type: "FACT", text: "Quantization can significantly reduce a model's memory requirements." },
+  { category: "AI & ML", type: "JOKE", text: "RAG: giving an LLM a library card and hoping it reads the right book." },
+  { category: "AI & ML", type: "JOKE", text: "An AI agent without tools is just a very confident chatbot." },
+  { category: "AI & ML", type: "JOKE", text: "The hardest part of an AI project is sometimes deciding what to call it." },
+
+  // 🧑💻 Git & Open Source
+  { category: "Git & Open Source", type: "JOKE", text: "git push --force is a confidence test." },
+  { category: "Git & Open Source", type: "JOKE", text: "Git remembers everything. Unfortunately." },
+  { category: "Git & Open Source", type: "JOKE", text: '"It was working before I committed."' },
+  { category: "Git & Open Source", type: "JOKE", text: "git blame is technically a debugging tool." },
+  { category: "Git & Open Source", type: "JOKE", text: "Every developer eventually learns what rm -rf means." },
+  { category: "Git & Open Source", type: "JOKE", text: "Never deploy on Friday. Unless you enjoy weekends in the server room." },
+  { category: "Git & Open Source", type: "JOKE", text: "The production server doesn't care about your confidence." },
+  { category: "Git & Open Source", type: "FACT", text: "Git was created by Linus Torvalds in 2005." },
+  { category: "Git & Open Source", type: "JOKE", text: "Open source: where thousands of strangers help you solve problems you didn't know you had." },
+  { category: "Git & Open Source", type: "JOKE", text: "Git merge conflicts are just computers asking humans to settle an argument." },
+
+  // ☕ Developer Life
+  { category: "Developer Life", type: "JOKE", text: "Coffee doesn't compile code. We checked." },
+  { category: "Developer Life", type: "JOKE", text: "Developers don't sleep. They wait for builds." },
+  { category: "Developer Life", type: "JOKE", text: '"Five minutes" in developer time has no defined unit.' },
+  { category: "Developer Life", type: "JOKE", text: "The hardest part of coding is deciding what to eat while the code builds." },
+  { category: "Developer Life", type: "JOKE", text: "A developer's natural habitat contains at least three browser windows and one terminal." },
+  { category: "Developer Life", type: "JOKE", text: "There is always one more dependency." },
+  { category: "Developer Life", type: "JOKE", text: "The fastest way to learn a framework is to start a project you don't know how to finish." },
+  { category: "Developer Life", type: "THOUGHT", text: 'Most projects begin with "I wonder if I can..."' },
+  { category: "Developer Life", type: "JOKE", text: "The tutorial worked perfectly. My project did not." },
+  { category: "Developer Life", type: "JOKE", text: "You know you've been debugging too long when the variable names start looking personal." },
+
+  // 🔥 Short Ones & Personal Quotes (Likhith's Quotes)
+  { category: "Personal", type: "THOUGHT", text: "Curiosity is a surprisingly useful engineering skill." },
+  { category: "Personal", type: "JOKE", text: "I came for the tutorial. I stayed because the bug wouldn't leave." },
+  { category: "Personal", type: "THOUGHT", text: "Build something you wish already existed." },
+  { category: "Personal", type: "JOKE", text: "Still learning. Still building. Still breaking things occasionally." },
+  { category: "Personal", type: "THOUGHT", text: "Every great project starts with a slightly unreasonable idea." },
+  { category: "Likhith", type: "THOUGHT", text: "It started with a Celkon. Things got complicated." },
+  { category: "Likhith", type: "THOUGHT", text: "I came for web development. AI had other plans." },
+  { category: "Likhith", type: "THOUGHT", text: "I wanted to understand how things worked. Things escalated." },
+  { category: "Likhith", type: "THOUGHT", text: "I started taking toys apart. Now I take software apart." },
+  { category: "Likhith", type: "THOUGHT", text: "Curiosity caused most of my projects." },
+  { category: "Likhith", type: "THOUGHT", text: "One project was supposed to be enough. It wasn't." },
+  { category: "Likhith", type: "THOUGHT", text: "I don't always have a plan. Sometimes I just start building." },
+  { category: "Likhith", type: "THOUGHT", text: "The internet taught me things my textbooks never did." },
+  { category: "Likhith", type: "THOUGHT", text: "Started with C. Somehow ended up talking to LLMs." },
+  { category: "Likhith", type: "THOUGHT", text: "Still figuring things out. That's the fun part." }
+];
